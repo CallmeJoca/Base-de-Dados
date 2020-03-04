@@ -12,5 +12,21 @@ USE DBProject
 --6
 --SELECT * FROM Projecto WHERE Designacao LIKE '%ria%'
 --7
-SELECT DISTINCT DepNum FROM Empregado
+--SELECT DISTINCT DepNum FROM Empregado
 --8
+--SELECT ALL DepNum FROM Empregado
+--9
+--SELECT * FROM Empregado, Departamento WHERE Empregado.DepNum = Departamento.DepNum
+--10
+--SELECT Empregado.*, Departamento.Nome, Departamento.Local FROM Empregado, Departamento WHERE Empregado.DepNum = Departamento.DepNum
+--11
+--SELECT Empregado.*, Departamento.Nome, Departamento.Local FROM Empregado INNER JOIN Departamento ON Empregado.DepNum = Departamento.DepNum
+--12
+--SELECT Departamento.DepNum, Departamento.Nome, Empregado.EmpNum, Empregado.Nome FROM Departamento LEFT JOIN Empregado ON Empregado.DepNum = Departamento.DepNum
+--13
+--SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador' OR Atribuicao.Funcao='colaborador'
+--14
+--SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador' AND Atribuicao.Funcao='colaborador'
+--15
+SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador'
+SELECT * FROM Atribuicao
