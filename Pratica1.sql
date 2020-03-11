@@ -26,7 +26,13 @@ USE DBProject
 --13
 --SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador' OR Atribuicao.Funcao='colaborador'
 --14
---SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador' AND Atribuicao.Funcao='colaborador'
+--SELECT A.EmpNum FROM Atribuicao A WHERE A.Funcao='coordenador' INTERSECT SELECT A.EmpNum FROM Atribuicao A WHERE A.Funcao='colaborador'
 --15
-SELECT DISTINCT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador'
-SELECT * FROM Atribuicao
+--SELECT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='coordenador' EXCEPT SELECT Atribuicao.EmpNum FROM Atribuicao WHERE Atribuicao.Funcao='colaborador'
+--16
+--SELECT E.Nome FROM Empregado E, Atribuicao A WHERE E.EmpNum = A.EmpNum INTERSECT SELECT A.EmpNum FROM Atribuicao A WHERE A.ProjNum=1 INTERSECT SELECT A.EmpNum FROM Atribuicao A WHERE A.ProjNum=2 INTERSECT SELECT A.EmpNum FROM Atribuicao A WHERE A.ProjNum=3 INTERSECT SELECT A.EmpNum FROM Atribuicao A WHERE A.ProjNum=4
+--17
+--SELECT P.Designacao FROM Projecto P WHERE 
+SELECT DISTINCT D.DepNum FROM Departamento D
+
+--18
